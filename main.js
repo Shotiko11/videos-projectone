@@ -52,14 +52,14 @@ let previousMouseX = 0;
 let previousMouseY = 0;
 let rotationSpeedX = 0;
 let rotationSpeedY = 0;
-let currentRotationX = 0; // Store current rotation values
+let currentRotationX = 0; 
 let currentRotationY = 0;
 
 document.addEventListener("mousedown", () => {
   isMouseDown = true;
   rotationSpeedX = 0;
   rotationSpeedY = 0;
-  currentRotationX = cube.rotation.x; // Store current rotation values
+  currentRotationX = cube.rotation.x; 
   currentRotationY = cube.rotation.y;
 });
 
@@ -75,7 +75,7 @@ document.addEventListener("mousemove", (event) => {
     const deltaX = currentMouseX - previousMouseX;
     const deltaY = currentMouseY - previousMouseY;
 
-    cube.rotation.x = currentRotationX - deltaY * 0.002; // Use stored values
+    cube.rotation.x = currentRotationX - deltaY * 0.002; 
     cube.rotation.y = currentRotationY - deltaX * 0.002;
 
     rotationSpeedX = deltaX * 0.002;
